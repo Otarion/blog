@@ -3,15 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent;
-use App\Models\PostController;
 
 class Post extends Model {
 
-public function posts () {
+public function posts() {
     foreach (Post::all() as $posts) {
-        echo $posts->name;
+        return $this -> view('index', compact('posts'));
     }
 }
-
+public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

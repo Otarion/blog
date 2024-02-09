@@ -6,10 +6,16 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
+    public function show($slug) {
+        $post = Post::where('slug', $slug)->firstOrFail();
+        return $this -> view('post', ['post' => $post]);
+    }
     public function index()
     {
         $posts = Post::all();
+        $post = Post::find(1);
         
         return $this ->view('index', ['posts' => $posts]);
     }
+    
 }
