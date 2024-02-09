@@ -13,7 +13,6 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        $post = Post::find(1);
         
         return $this ->view('index', ['posts' => $posts]);
     }
