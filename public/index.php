@@ -17,7 +17,3 @@ $response = $router->dispatch();
 
 // On envoie la réponse à notre visiteur (https://symfony.com/doc/current/components/http_foundation.html#sending-the-response)
 $response->send();
-
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
