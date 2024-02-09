@@ -8,13 +8,13 @@ class PostController extends Controller
 {
     public function show($slug) {
         $post = Post::where('slug', $slug)->firstOrFail();
-        return $this -> view('post', ['post' => $post]);
+        return $this -> view('post.html', ['post' => $post]);
     }
     public function index()
     {
         $posts = Post::all();
         
-        return $this ->view('index', ['posts' => $posts]);
+        return $this ->view('index.html', ['posts' => $posts]);
     }
     
 }

@@ -9,8 +9,8 @@ use App\Controllers\HomeController;
 use App\Controllers\AdminController;
 
 return [
-    Route::get('/', [HelloController::class, 'index']),
-    Route::get('/hello/{id}', [HelloController::class, 'hello']),
+    // Route::get('/', [HelloController::class, 'index']),
+    // Route::get('/hello/{id}', [HelloController::class, 'hello']),
     Route::get('/', [PostController::class, 'index']),
     Route::get('/articles/{slug}', [PostController::class, 'show']),
     Route::get('/inscription',[RegisterController::class,'showRegisterForm']),

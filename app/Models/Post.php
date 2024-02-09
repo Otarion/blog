@@ -8,7 +8,7 @@ class Post extends Model {
 
 public function posts() {
     foreach (Post::all() as $posts) {
-        return $this -> view('index', compact('posts'));
+        return $this -> view('index.html', compact('posts'));
     }
 }
 public function comments()

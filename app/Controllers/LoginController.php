@@ -5,6 +5,6 @@ namespace App\Controllers;
 class LoginController extends Controller 
 {
     public function showLoginForm(){
-        return $this -> view ('login');
+        return $this -> view ('login.html');
     }
 }

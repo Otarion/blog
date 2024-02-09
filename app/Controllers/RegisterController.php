@@ -5,6 +5,6 @@ namespace App\Controllers;
 class RegisterController extends Controller
 {
     public function showRegisterForm() {
-        return $this -> view ('register');
+        return $this -> view ('register.html');
     }
 }

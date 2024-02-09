@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
-class  Comment {
+use Illuminate\Database\Eloquent\Model;
+class  Comment extends Model {
     
 }
