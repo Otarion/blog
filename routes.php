@@ -6,6 +6,7 @@ use MVC\Route;
 use App\Controllers\RegisterController;
 use App\Controllers\LoginController;
 use App\Controllers\HomeController;
+use App\Controllers\AdminController;
 
 return [
     Route::get('/', [HelloController::class, 'index']),
@@ -15,4 +16,5 @@ return [
     Route::get('/inscription',[RegisterController::class,'showRegisterForm']),
     Route::get('/connexion',[LoginController::class,'showLoginForm']),
     Route::get('/compte',[HomeController::class,'index']),
+    Route::get('/compte/admin',[AdminController::class,'index']),
 ];
